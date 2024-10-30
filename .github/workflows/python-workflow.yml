@@ -8,12 +8,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v4
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    - name: upload requirements.txt as artifact
-      upload: requirements.txt
+        
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
